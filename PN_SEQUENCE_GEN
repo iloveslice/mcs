@@ -1,0 +1,21 @@
+#include <stdio.h>
+void main()
+{
+int t[] = {1,1,0,1};
+int i, u1,x1,x2,x3,x4;
+x1 = t[0];
+x2 = t[1];
+x3 = t[2];
+x4 = t[3];
+printf("\n\n");
+for(i=0;i<15;i++)
+{
+u1 = x3^x4;
+printf("%d",x4);
+x4 = x3;
+x3 = x2;
+x2 = x1;
+x1 = u1;
+}
+printf("\n\n");
+}
