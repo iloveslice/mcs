@@ -1,0 +1,40 @@
+//To write & study the program of CDMA implementation
+
+#include <stdio.h>
+int main()
+{
+ int ak[6] = {-1, 1, -1, -1, 1, 1};
+ int a = 1, b = 2, k, e, as[6], bs[6], cs[6], ds[6];
+ unsigned int bR[6] = {1, 1, -1, 1, -1, 1};
+ for (int i = 0; i < 6; i++)
+ as[i] = ak[i] * a;
+ printf("as: ");
+ for (int j = 0; j < 6; j++)
+ printf("%d ", as[j]);
+ printf("\n");
+ for (int j = 0; j < 6; j++)
+ bs[j] = as[j] | b;
+ printf("bs: ");
+ for (int j = 0; j < 6; j++)
+ printf("%d ", bs[j]);
+ printf("\n");
+ for (k = 0; k < 6; k++)
+ cs[k] = as[k] + bs[k];
+ printf("cs: ");
+ for (int k = 0; k < 6; k++)
+ printf("%d ", cs[k]);
+ printf("\n");
+ for (k = 0; k < 6; k++)
+ ds[k] = cs[k] * bR[k];
+ printf("ds: ");
+ for (int k = 0; k < 6; k++)
+ printf("%d ", ds[k]);
+ printf("\n");
+ int sum = ds[0] + ds[1] + ds[2] + ds[3] + ds[4] + ds[5];
+ printf("Sum: %d\n", sum);
+ if (e <= 0)
+ printf("0 is transmitted\n");
+ else
+ printf("1 is transmitted\n");
+ return 0;
+}
